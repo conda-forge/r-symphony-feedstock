@@ -1,4 +1,4 @@
-{% set version = '0.1.1' %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/symphony_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/symphony/symphony_{{ version }}.tar.gz
-  sha256: 8c69883459a418d8079811c40c7b6fbc1b3a3709f3e3bf642d500b20a082ed2d
+  sha256: 09e2d9cb428f2f3c2ff301d2c15842d12467215b4171fb26e4459b775ff171cd
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -84,8 +84,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=symphony
   license: GPL-3.0-or-later
-  summary: Implements the Symphony single-cell reference building and query mapping algorithms
-    and additional functions described in Kang et al <https://www.nature.com/articles/s41467-021-25957-x>.
+  summary: Implements the Symphony single-cell reference building and query mapping algorithms and additional functions described in Kang et al <https://www.nature.com/articles/s41467-021-25957-x>.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
